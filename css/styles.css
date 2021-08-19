@@ -198,6 +198,10 @@ a:hover {
   }
 
   /* Table */
+  th {
+    border-radius: 5px;
+  }
+
   table, th, td {
     border: 1px solid var(--dark-navy);
     color: var(--green);
@@ -210,11 +214,16 @@ a:hover {
   }
 
   tr:nth-child(even) {
-    background-color: var(--navy-shadow);
+    background-color: var(--light-navy);
   }
 
   .even {
     font-weight: 800;
+  }
+
+  .top-row, th{
+    background-color: #112f40 !important;
+    font-weight: 650 !important;
   }
 
   .form-container {
@@ -223,7 +232,6 @@ a:hover {
 
   .bg-rounded {
     border-radius: 8px;
-
   }
 
   /* Footer */
