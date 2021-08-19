@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A Coding Project by Brittany Pitre</title>
+    <title>LoanShark</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,14 +19,28 @@
     <link href="/css/styles.css" rel="stylesheet">
 </head>
 
-<body class="d-flex flex-column h-100"> 
-   
+< class="d-flex flex-column h-100"> 
+   <!--bubbles-->
+    <section class="sticky">
+        <div class="bubbles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
+    </section>
     <!--Navbar-->
     <nav class="navbar navbar-expand-md pt-4 pb-3 fixed-top navbar-dark">
     <div class="container-fluid">
         <!--Logo-->
-        <a class="navbar-brand" href="index.html" title="HUNDO">
-            <img src="/img/hundo.small.png" width="100" alt="Logo" class=" hover d-inline ms-3">
+        <a class="navbar-brand" href="index.html" title="LoanShark">
+            <img src="/img/loanshark-logo-small.png" width="200" alt="LoanShark Logo" class=" hover d-inline ms-3">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,11 +61,94 @@
         </div>
     </div>
     </nav>
-
+       
     <!--Main-->
     <main class="flex-shrink-0 mt-5">
        <div class="container">
-            
+           <div class="row row-cols-1 row-cols-lg-2 gx-3">
+               <div class="col">
+                   <h1>Loan Calculator</h1>
+                   <div class="container form-container bg-rounded p-3">
+                    <form class="row-cols-1">
+                        <div class="col">
+                            <label>Loan Amount:</label>
+                            <input class="form-control" id="loanAmount" type="number" placeholder="Loan Amount" aria-label="Loan Amount" value="15000" required>
+                        </div>
+                        <div class="col">
+                            <label>Payments:</label>
+                            <input class="form-control" id="payments" type="number" placeholder="Payments" aria-label="Payments"  value="60" required>
+                        </div>
+                        <div class="col">
+                            <label>Rate:</label>
+                            <input class="form-control" id="rate" type="number" placeholder="Rate" aria-label="Rate" value="3" required>
+                        </div>
+                        <div class="col d-flex justify-content-end">
+                            <button id="btnReset" class="btn btn-loan mt-3 me-2" type="button">Reset</button>
+                            <button id="btnCalculate" class="btn btn-loan mt-3" type="button">Calculate</button>
+                        </div>
+                    </form>
+                   </div>
+               </div>
+               <!--Right Col-->
+               <div class="col d-flex justify-content-center">
+                   <img src="img/loan-shark-logo.png" alt="LoanShark Logo" class="img-fluid" width="470">
+               </div>
+               <div class="col">
+                   <div class="container">
+                        <div class="row row-cols-1">
+                            <div class="col d-flex justify-content-center mt-3">
+                                <h3>Your Monthly Payments</h3>
+                            </div>
+                            <div class="col d-flex justify-content-center mt-4">
+                                <h1 id="monthlyPayment" class="font-large">$269.53</h1>
+                            </div>
+                            <!--Amounts-->
+                            <div class="col">
+                                <div class="row row-cols-1 gy-3">
+                                    <div class="col bg-rounded bg-light p-2">
+                                        <div class="row row-cols-2">
+                                            <div class="col">
+                                                <h6>Total Principle:</h6>
+                                            </div>
+                                            <div class="col d-flex justify-content-end">
+                                                <h6 id="totalPrincipal">$15 000</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col bg-rounded bg-light p-2">
+                                        <div class="row row-cols-2">
+                                            <div class="col">
+                                                <h6>Total Interest:</h6>
+                                            </div>
+                                            <div class="col d-flex justify-content-end">
+                                                <h6 id="totalInterest">$1172</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col bg-rounded bg-light p-2">
+                                        <div class="row row-cols-2">
+                                            <div class="col">
+                                                <h6>Total Cost:</h6>
+                                            </div>
+                                            <div class="col d-flex justify-content-end">
+                                                <h6 id="totalCost" class="fw-bold">$16 231</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+               <!--Table-->
+               <div class="table-responsive">
+                    <table class="table table-sm">
+                        <tbody id="results">
+                            <!--Results Go Here-->
+                        </tbody>
+                    </table>
+               </div>
+           </div>
        </div>
     </main>
 
@@ -75,7 +172,7 @@
                     <div class="row">
                         <!--Github-->
                         <div class="col">
-                            <a href="https://github.com/BrittP-NBCC/Hundo" target="_blank">
+                            <a href="https://github.com/BrittP-NBCC/LoanShark" target="_blank">
                                 <span class="icon">
                                   <i class="fab fa-github-alt" title="Github"></i>
                                 </span>
@@ -119,6 +216,11 @@
         </div>
     </footer>
 
+    <!--template-->
+    <template>
+
+    </template>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
@@ -127,6 +229,12 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
     <script src="js/main.js"></script>
+    <script>
+        document.getElementById("btnCalculate").addEventListener("click", getValue);
+    </script>
+    <script>
+        document.getElementById("btnReset").addEventListener("click", resetPage);
+    </script>
 </body>
 
 </html>
