@@ -103,7 +103,8 @@
                                 let principalPayment;
                             
                                 //monthly calculations
-                                let monthlyPayment = parseFloat((loanAmount * (rate/1200)) / (1-(1+(rate/1200))**(-Math.abs(payments))));
+                                let monthlyPayment = parseFloat((loanAmount * (rate/1200)) / 
+                                (1-(1+(rate/1200))**(-Math.abs(payments))));
                             
                                 //string to store in html
                                 let htmlString = ""
@@ -121,8 +122,9 @@
                             
                                     //concatinate on to htmlString the results of the calculations
                                     htmlString += `&lt;tr>&lt;td>${month+1}&lt;/td>&lt;td>${monthlyPayment.toFixed(2)}
-                                        &lt;td>&lt;td>${principalPayment.toFixed(2)}&lt;/td>&lt;td>${interestPayment.toFixed(2)}
-                                        &lt;/td>&lt;td>${totalInterest.toFixed(2)}&lt;/td>&lt;td>${balance.toFixed(2)}&lt;/td>&lt;/tr>`
+                                        &lt;td>&lt;td>${principalPayment.toFixed(2)}&lt;/td>&lt;td>${interestPayment.
+                                        toFixed(2)}&lt;/td>&lt;td>${totalInterest.toFixed(2)}&lt;/td>&lt;td>$
+                                        {balance.toFixed(2)}&lt;/td>&lt;/tr>`
                                 }
                                 
                                 let totalCost = loanAmount + totalInterest;
@@ -174,7 +176,7 @@
     </main>
 
     <!--Footer-->
-    <footer class="footer fixed-bottom mt-auto py-3">
+    <footer class="footer mt-auto py-3">
         <div class="container-fluid text-center">
             <div class="row align-items-center row-cols-1 row-cols-md-3 gy-2">
                 <!--Email & Copyright-->

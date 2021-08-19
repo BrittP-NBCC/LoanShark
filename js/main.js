@@ -69,7 +69,7 @@ function calculateLoan(loanAmount, payments, rate){
     // display calculated variables to proper positions while inside function
     // use the .toLocaleString to convert to USD format
     resultsObject.monthlyPayment = usd(monthlyPayment);
-    resultsObject.totalPrincipal = usd(totalPrincipal);
+    resultsObject.principalPayment = usd(principalPayment);
     resultsObject.totalInterest = usd(totalInterest);
     resultsObject.totalCost = usd(totalCost);
 
@@ -82,7 +82,7 @@ function calculateLoan(loanAmount, payments, rate){
 //display the data in a table / view
 function displayData(resultsObject){
     $("monthlyPayment").innerHTML =  resultsObject.monthlyPayment;
-    $("totalPrincipal").innerHTML =  resultsObject.totalPrincipal;
+    $("totalPrincipal").innerHTML =  resultsObject.principalPayment;
     $("totalInterest").innerHTML =  resultsObject.totalInterest;
     $("totalCost").innerHTML =  resultsObject.totalCost;
     //creates table
