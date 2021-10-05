@@ -1,2 +1,2 @@
-# JSSiteTemplate
-Site Template for JS Projects
+# LoanShark
+An application that generates an amorization schedule for a simple interest loan.
